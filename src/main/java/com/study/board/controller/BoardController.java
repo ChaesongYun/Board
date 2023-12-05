@@ -12,7 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
@@ -81,5 +80,14 @@ public class BoardController {
         boardTemp.setContent(board.getContent());
         boardService.write(boardTemp, file);
         return "redirect:/board/view?id={id}";
+    }
+
+    @Controller
+    public static class HomeController {
+        @GetMapping("/")
+        public String index(){
+            return "index";
+        }
+
     }
 }
