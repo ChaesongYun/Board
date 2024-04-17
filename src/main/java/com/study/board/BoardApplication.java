@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BoardApplication {
 
 	public static void main(String[] args) {
-		// 깃 커밋 테스트22
+		// 깃 커밋 테스트3
 		SpringApplication.run(BoardApplication.class, args);
 	}
 
